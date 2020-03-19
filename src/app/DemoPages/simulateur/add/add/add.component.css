@@ -1,0 +1,61 @@
+
+      .example-container {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      .example-container > * {
+        width: 100%;
+      }
+  
+      .example-container form {
+        margin-bottom: 20px;
+      }
+  
+      .example-container form > * {
+        margin: 5px 0;
+      }
+  
+      .example-container .mat-radio-button {
+        margin: 0 5px;
+      }
+
+      .card-body{
+        text-align: center;
+      }
+
+  .vert{
+    background-color:#5ff5d2 ;
+    border-radius: 25px;
+    }
+  .rouge{
+    background-color: #FF5555;
+    border-radius: 25px;
+  }
+
+  .green{
+    background-color:#5ff5d2 ;
+    }
+  .red{
+    background-color: #FF5555;
+  }
+
+  .vali{
+    background-color:#5ff5d2 ;
+    
+    }
+  .noVali{
+    background-color: #FF5555;
+  }
+
+  .ok{
+background-image: url(../../../../../assets/images/avatars/vrai.png);    
+background-repeat: no-repeat;
+    }
+  .no{
+    background-image: url(../../../../../assets/images/avatars/x.png) ;    
+    background-repeat: no-repeat;  }
+
+    .claud{
+      display: none;
+    }

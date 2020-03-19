@@ -1,0 +1,59 @@
+<div class="app-page-title">
+  <div class="page-title-wrapper">
+    <div class="page-title-heading">
+    
+      <div>
+       <span> Profile UNIPRET</span>
+     
+      </div>
+    </div>
+    <div class="page-title-actions">
+    
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card-shadow-primary profile-responsive card-border mb-3 card">
+  <div class="dropdown-menu-header">
+    <div class="dropdown-menu-header-inner bg-info">
+      <div class="menu-header-image opacity-2"
+           style="background-image: url('./assets/images/dropdown-header/abstract1.jpg')"></div>
+      <div class="menu-header-content btn-pane-right">
+        <div class="avatar-icon-wrapper mr-2 avatar-icon-xl">
+          <div class="avatar-icon rounded"><img
+            src="https://www.back.hayko-crm.dev/{{pathPhoto}}"
+            alt="Avatar 5"></div>
+        </div>
+
+        <div class="widget-content-left flex2">
+          <div class="widget-heading"> <strong>{{username}}</strong> </div>
+          <div class="widget-subheading opacity-7">{{role}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane active show" id="tab-example-161">
+      <ul class="nav flex-column">
+        <li class="nav-item-header nav-item">Nom : {{nom}}</li>               
+        <li class="nav-item-header nav-item">Prénom : {{prenom}}</li>
+
+       
+      </ul>
+
+      <ul class="nav flex-column">
+        <li class="nav-item-divider nav-item"></li>
+        <li class="nav-item-btn text-center nav-item">
+          <button class="btn-wide btn btn-primary btn-sm" [routerLink]="'/editProfile'">Modifier informations</button>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="tab-example-162">
+      <div class="p-3"><p class="mb-0">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</div>

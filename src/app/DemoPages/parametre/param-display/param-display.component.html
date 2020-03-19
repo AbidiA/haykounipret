@@ -1,0 +1,395 @@
+<div class="animated fadeIn">
+
+  <div class="wrapper fadeInDown">
+      <div id="formContent">
+
+          <form class="container mb-3 mt-3" [formGroup]="paramForm">
+              <div class="row">
+                  <div class="col-6">
+                      <h5>Montant Minimum Du prêt</h5>
+                  </div>
+                  <div class="col-6">
+                      <h5>Taux D'honoraires</h5>
+                  </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+
+              </div>
+
+              <div class="row ">
+
+                  <div class="col-2">
+
+                      <h6 class="mt-2 mb-4">sans garantie</h6>
+                      <h6>avec garantie</h6>
+                  </div>
+                  <div class="col-3">
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.montantminimumpret.sg" formControlName="montantminimumpretsg">
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.montantminimumpret.ag" formControlName="montantminimumpretag" >
+
+                  </div>
+                  <div class="col-1">
+                      <h6 class="mt-3 mb-4">€</h6>
+                      <h6>€</h6>
+                  </div>
+                  <div class="col-2">
+
+                      <h6 class="mt-2 mb-4">sans garantie</h6>
+                      <h6>avec garantie</h6>
+                  </div>
+                  <div class="col-3">
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.tauxhonoraires.sg" formControlName="tauxhonorairessg" >
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.tauxhonoraires.ag" formControlName="tauxhonorairesag" >
+
+                  </div>
+                  <div class="col-1">
+                      <h6 class="mt-3 mb-4">%</h6>
+                      <h6>%</h6>
+                  </div>
+              </div>
+
+              <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+              <div class="row mt-3">
+                  <div class="col-6">
+                      <h5>Frais De Dossier Prêteur</h5>
+                  </div>
+                  <div class="col-6">
+                      <h5>Taux Du Prêt Nominal Moyen</h5>
+                  </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+
+              </div>
+
+              <div class="row ">
+
+                  <div class="col-2">
+
+                      <h6 class="mt-3 mb-4"><strong>Sans Garantie</strong> </h6>
+                      <h6 class="mt-3 mb-4">Taux</h6>
+                      <h6 class="mt-3 mb-4">Plafond</h6>
+                      <h6 class="mt-3 mb-3"><strong>Avec Garantie</strong> </h6> <br>
+                      <h6 class="mt-1 mb-4">Taux</h6>
+                      <h6 class="mt-1 mb-4">plafond</h6>
+                  </div>
+                  <div class="col-3">
+                      <br><br> 
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.fraisdossierpreteur.tauxsg" formControlName="fraisdossierpreteurtauxsg" >
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.fraisdossierpreteur.plafondsg" formControlName="fraisdossierpreteurplafondsg" >
+                     <br><br> 
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.fraisdossierpreteur.tauxag" formControlName="fraisdossierpreteurtauxag" >
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.fraisdossierpreteur.plafondag" formControlName="fraisdossierpreteurplafondag" >
+                  </div>
+                  <div class="col-1">
+
+                      <br><br> 
+                      <h6 class="mt-3 mb-4">%</h6>
+
+                      <h6 class="mt-2 mb-4">€</h6>
+
+                      <br><br>
+                      <h6 class="mt-1 mb-4">%</h6>
+
+                      <h6 class="mt-3 mb-4">€</h6>
+                  </div>
+                  <div class="col-2">
+                      <h6 class="mt-3 mb-4"><strong>Taux saisissable</strong> </h6>
+                      <h6 class="mt-3 mb-4">Sans garantie</h6><br>
+                      <h6 class="mt-3 mb-4">Avec garantie</h6>
+                      <h6 class="mt-3 mb-1">Fixe</h6> <br>
+                      <h6 class="mt-1 mb-4">Variable</h6>
+
+                  </div>
+                  <div class="col-3">
+                      <select name="" id="" class="custom-select mr-sm-2 mb-2" formControlName="txsaisisable" [(ngModel)]="listParam.tauxdupretnominalmoyen.tauxsaisissable">
+                          <option value="oui">Oui</option>
+                          <option value="non">Non</option>
+                
+                      </select>                       
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.tauxdupretnominalmoyen.sg" formControlName="tauxdupretnominalmoyensg" >
+                      <br><br><br>
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.tauxdupretnominalmoyen.agfixe" formControlName="tauxdupretnominalmoyenagfixe" >
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.tauxdupretnominalmoyen.agvariable" formControlName="tauxdupretnominalmoyenagvariable" >
+
+                  </div>
+                  <div class="col-1">
+                      <br><br>
+                      <h6 class="mt-3 mb-2">%</h6>
+                      <br><br><br>
+                      <h6 class="mt-3 mb-3">%</h6>
+                      <h6 class="mt-4 mb-4">%</h6>
+
+                  </div>
+              </div>
+
+              <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+              <div class="row mt-3">
+                  <div class="col-6">
+                      <h5>Durée Possible Des Prêts </h5>
+                  </div>
+                  <div class="col-6">
+                      <h5>Taux D'endettement Aprés</h5>
+                  </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+
+              </div>
+
+              <div class="row ">
+
+                  <div class="col-2">
+
+                      <h6 class="mt-3 mb-4"><strong>Sans Garantie</strong> </h6>
+                      <h6 class="mt-3 mb-4">Minimum</h6>
+                      <h6 class="mt-3 mb-4">Maximum</h6>
+                      <h6 class="mt-3 mb-3"><strong>Avec Garantie</strong> </h6> <br>
+                      <h6 class="mt-1 mb-4">Minimum</h6>
+                      <h6 class="mt-1 mb-4">Maximum</h6>
+                  </div>
+                  <div class="col-3">
+                      <br><br> 
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.durepossibledespret.minimumsg" formControlName="durepossibledespretminimumsg" >
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.durepossibledespret.maximumsg" formControlName="durepossibledespretmaximumsg" >
+                     <br><br> 
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.durepossibledespret.mimimumag" formControlName="durepossibledespretmimimumag" >
+                     <input type="text" class="form-control mb-2" [(ngModel)]="listParam.durepossibledespret.maximumag" formControlName="durepossibledespretmaximumag">
+                  </div>
+                  <div class="col-1">
+
+                      <br><br> 
+                      <h6 class="mt-3 mb-4">mois</h6>
+
+                      <h6 class="mt-2 mb-4">mois</h6>
+
+                      <br><br>
+                      <h6 class="mt-1 mb-4">mois</h6>
+
+                      <h6 class="mt-3 mb-4">mois</h6>
+                  </div>
+                  <div class="col-2">
+                      <br>
+                      <h6 class="mt-3 mb-4">Sans garantie</h6><br>
+                      <h6 class="mt-3 mb-4">Avec garantie</h6>
+                      <h6 class="mt-3 mb-1">Fixe</h6> <br>
+                      <h6 class="mt-1 mb-4">Variable</h6>
+
+                  </div>
+                  <div class="col-3">
+                      <br>
+                      <input type="text" class="form-control mb-2"  [(ngModel)]="listParam.tauxdendettementapres.sg" formControlName="tauxdendettementapressg" >
+                      <br><br><br>
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.tauxdendettementapres.agfixe" formControlName="tauxdendettementapresagfixe" >
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.tauxdendettementapres.agvariable" formControlName="tauxdendettementapresagvariable" >
+
+                  </div>
+                  <div class="col-1">
+                      <br>
+                      <h6 class="mt-3 mb-2">%</h6>
+                      <br><br><br>
+                      <h6 class="mt-3 mb-3">%</h6>
+                      <h6 class="mt-4 mb-4">%</h6>
+
+                  </div>
+              </div>
+
+                              <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+              <div class="row">
+                  <div class="col-6">
+                      <h5>Limite D'âge Du prêt</h5>
+                  </div>
+                  <div class="col-6">
+                      <h5>Reste à Vivre</h5>
+                  </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+
+              </div>
+
+              <div class="row ">
+                  
+                  <div class="col-3">
+
+                      <br><br><br>
+                      <h6 class="mt-2 mb-4">Age en début de prêt</h6>
+                      <h6>Age en fin de prêt</h6>
+                      
+                  </div>
+                  <div class="col-2">
+                      <br><br><br>
+
+                      <input type="text" class="form-control mb-2"  [(ngModel)]="listParam.limitagepret.ageendebutdepret" formControlName="limitagepretageendebutdepret">
+                      <input type="text" class="form-control mb-2"  [(ngModel)]="listParam.limitagepret.ageenfindepret" formControlName="limitagepretageenfindepret" >
+
+                  </div>
+                  <div class="col-1">
+                      <br><br><br>
+
+                      <h6 class="mt-2 mb-4">ans</h6>
+                      <h6>ans</h6>
+                  </div>
+                  <div class="col-2">
+
+                      <h6 class="mt-2 mb-4">Pour 1 personne</h6>
+                      <h6 class="mt-2 mb-4">Pour 2 personnes</h6>
+                      <h6 class="mt-2 mb-4">Pour 3 personnes</h6>
+                      <h6 class="mt-2 mb-4">Pour 4 personnes</h6>
+                      <h6 class="mt-2 mb-4">Pour 5 personnes</h6>
+                      <h6 class="mt-2 mb-4">Par enfant supplémentaire</h6>
+                  </div>
+                  <div class="col-3">
+                      <input type="text" class="form-control mb-1" [(ngModel)]="listParam.resteravivre.p1" formControlName="resteravivrep1" >
+                      <input type="text" class="form-control mb-1" [(ngModel)]="listParam.resteravivre.p2" formControlName="resteravivrep2" >
+                      <input type="text" class="form-control mb-1" [(ngModel)]="listParam.resteravivre.p3" formControlName="resteravivrep3" >
+                      <input type="text" class="form-control mb-1" [(ngModel)]="listParam.resteravivre.p4" formControlName="resteravivrep4" >
+                        <input type="text" class="form-control mb-1" [(ngModel)]="listParam.resteravivre.p5" formControlName="resteravivrep5" >
+                      <input type="text" class="form-control mb-1" [(ngModel)]="listParam.resteravivre.parenfantsupple" formControlName="resteravivreparenfantsupple" >
+                  </div>
+                  <div class="col-1">
+                      <h6 class="mt-3 mb-4">€</h6>
+                      <h6 class="mt-3 mb-4">€</h6>
+                      <h6 class="mt-3 mb-4">€</h6>
+                      <h6 class="mt-3 mb-4">€</h6>
+                      <h6 class="mt-3 mb-4">€</h6>
+                      <h6 class="mt-3 mb-4">€</h6>
+
+                  </div>
+              </div>
+
+              <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+              
+              <div class="row">
+                  <div class="col-6">
+                      <h5>Ratio Hypothécaire</h5>
+                  </div>
+                  <div class="col-6">
+                      <h5>Assurance</h5>
+                  </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+                  <div class="col-6">
+                      <hr style="border:1px solid ;">
+                  </div>
+
+              </div>
+
+              <div class="row ">
+                  
+                  <div class="col-2">
+
+                      <h6 class="mt-2 mb-4">Maximum</h6>
+                      
+                  </div>
+                  <div class="col-3">
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.radiohypothecaire.maximum" formControlName="radiohypothecairemaximum" >
+
+                  </div>
+                  <div class="col-1">
+                      <h6 class="mt-3 mb-4">%</h6>
+                  </div>
+                  <div class="col-2">
+
+                      <h6 class="mt-2 mb-4">Taux annuel</h6>
+          
+                  </div>
+                  <div class="col-3">
+                      <input type="text" class="form-control mb-1"  [(ngModel)]="listParam.assurance.tauxannuel" formControlName="assurancetauxannuel" >
+                  
+                  </div>
+                  <div class="col-1">
+                      <h6 class="mt-3 mb-4">%</h6>
+                 
+
+                  </div>
+              </div>
+
+              <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+               
+              <div class="row">
+                  <div class="col-6">
+                      <h5>Revenus</h5>
+                  </div>
+                  <div class="col-6">
+                  </div>
+
+              </div>
+
+             
+
+              <div class="row ">
+                  
+                  <div class="col-3">
+
+                      <h6 class="mt-2 mb-4">Minimum sans garantie</h6>
+                      <h6 class="mt-2 mb-4">Minimum avec garantie</h6>
+
+                  </div>
+                  <div class="col-2">
+                      <input type="text" class="form-control mb-2" [(ngModel)]="listParam.revenus.minimumsg" formControlName="revenusminimumsg" >
+                      <input type="text" class="form-control mb-2"  [(ngModel)]="listParam.revenus.minimumag" formControlName="revenusminimumag">
+
+                  </div>
+                  <div class="col-1">
+                      <h6 class="mt-3 mb-4">€</h6>
+                      <h6 class="mt-3 mb-4">€</h6>
+
+                  </div>
+                  <div class="col-6">
+
+                  </div>
+              </div>
+
+              <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+          </form>
+
+          <div class="container">
+              <button type="button" (click)="editParametre()" class="btn btn-dark mt-3 mb-3">Enregistrer</button>
+
+          </div>
+      </div>
+  </div>
+</div>

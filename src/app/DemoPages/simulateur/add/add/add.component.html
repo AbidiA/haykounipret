@@ -1,0 +1,263 @@
+<div class="row">
+
+  <div class="col-3">
+    <div class="main-card mb-3 card">
+      <div class="card-body">
+
+
+
+
+
+
+        <p> <strong> Dossier :</strong> {{t1.dossier}}
+        </p>
+        <p><strong>Civilité :</strong> {{t1.civilite_e}}</p>
+        <p><strong>Nom & Prénom:</strong> {{t1.nom_e}} {{t1.prenom_e}} </p>
+        <p><strong>Age :</strong> {{t1.age_e}} </p>
+        <p><strong>Adresse :</strong> {{t1.adresse}} </p>
+        <p><strong>Numéro Tel :</strong> {{t1.telmobil}}</p>
+        <p class="red" *ngIf="limiteAge !=''">{{limiteAge}}</p>
+        <p class="red" *ngIf="testRev !=''">Revenus limite avec garantie est inferieur à {{revMinAg}}</p>
+        <p class="red" *ngIf="testRevS !=''">Revenus limite sans garantie est supérieur à {{revMinSg}}</p>
+
+        <footer class="blockquote-footer">Client <cite title="Source Title">Unipret</cite></footer>
+
+
+      </div>
+    </div>
+
+    <div class="main-card mb-3 card">
+      <div class="card-body">
+        <form class="container mb-3" [formGroup]="simForm">
+          <div class="form-row">
+
+            <div class="col-5">
+
+              <div class="example-container">
+
+                <mat-form-field>
+                  <input matInput #box (keyup)="keyup(box.value)" class="form-control" formControlName="reste"
+                    placeholder="CRD" [(ngModel)]="crd">
+                </mat-form-field>
+              </div>
+
+
+            </div>
+            <div class="col-1"></div>
+
+            <div class="col-5">
+
+              <div class="example-container">
+
+                <mat-form-field>
+                  <input matInput disabled #box4 (keyup)="keyup4(box4.value)" class="form-control"
+                    formControlName="ancienMens" placeholder="Ancienne Mensualité" [(ngModel)]="mensu">
+                </mat-form-field>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+          <div class="form-row" style="margin-top: 4%;">
+
+
+
+            <div class="col-5">
+
+
+
+              <div class="example-container">
+
+                <mat-form-field>
+                  <input matInput #box2 (keyup)="keyup2(box2.value)" class="form-control" formControlName="taux"
+                    [(ngModel)]="troi" placeholder="Taux Prime">
+                </mat-form-field>
+              </div>
+
+
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-5">
+
+              <div class="example-container">
+
+                <mat-form-field>
+                  <input matInput #box1 (keyup)="keyup1(box1.value)" class="form-control" formControlName="tauxS"
+                    [(ngModel)]="un" placeholder="Taux Starter">
+                </mat-form-field>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="col-9">
+
+
+
+
+
+        <div id="pdf">
+
+
+
+          <!--
+            <div class="form-row ml-3 " style="margin-top: 4%;">
+
+              <div class="col-6">
+                <h6 style="float: left;">Besoin Client : {{box.value}}</h6>
+              </div>
+
+
+            </div>
+
+
+            <div class="form-row ml-3" style="margin-top: 4%;">
+
+              <div class="col-6">
+                <h6 style="float: left;">Taux Starter: {{un}}</h6>
+              </div>
+
+            </div>
+
+            <div class="form-row ml-3" style="margin-top: 4%;">
+
+              <div class="col-6">
+                <h6 style="float: left;">Taux Prime: {{troi}}</h6>
+              </div>
+
+
+            </div>
+
+            <div class="form-row ml-3" style="margin-top: 4%;">
+              <div class="col-6"></div>
+
+
+
+            </div>
+
+-->
+          <h3 style="margin-top: 3%;" *ngIf="monDuPreColS =='noVali'" class="{{monDuPreColS}}">opération impossible !!
+            CRD inférieur à {{monDuPreSG}}</h3>
+
+          <div class="container">
+            <div class="main-card mb-3 card">
+
+              <div class="card-header text-center">
+                <h4> Mensualité pour chaque année sans garantie</h4>
+                <div class="btn-actions-pane-right">
+                  <div role="group" class="btn-group-sm btn-group">
+
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive" *ngIf="monDuPreColS !='noVali'">
+
+                <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                  <thead class="text-center">
+                    <tr>
+                      <th scope="col">Nbr année</th>
+                      <th scope="col">Nouvelle Mensualité</th>
+                      <th scope="col">Gain</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+
+                    </tr>
+                  </thead>
+                  <tbody class="text-center">
+                    <tr *ngFor="let i of testTab; let o = index">
+                      <th scope="row">{{i.ans}} </th>
+                      <td> {{ keyup3(i.ans , o) }}</td>
+                      <td>{{gainN}}</td>
+
+                      <td class="text-left" *ngIf="i.revCol != '' || i.restAvivre != '' || i.testAge !='' "><img
+                          src="../../../../../assets/images/avatars/non.png">&nbsp; {{i.restAvivre}} <span
+                          *ngIf="i.revCol != ''  ">&</span> {{i.revCol}} <span
+                          *ngIf="i.testAge != '' && i.restAvivre != '' ">&</span> {{i.testAge}}</td>
+                      <td class="text-left" *ngIf="i.revCol == '' && i.restAvivre == ''  && i.testAge == '' "><img
+                          src="../../../../../assets/images/avatars/oui.png">&nbsp; Dossier réalisable</td>
+
+
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 3%;"></h3>
+          <h3 *ngIf="monDuPreCol =='noVali'" class="{{monDuPreCol}}">opération impossible !! CRD inférieur à
+            {{monDuPreAG}}</h3>
+          <div class="container">
+            <div class="main-card mb-3 card">
+
+              <div class="card-header">
+                <h4> Mensualité pour chaque année avec garantie </h4>
+                <div class="btn-actions-pane-right">
+                  <div role="group" class="btn-group-sm btn-group">
+
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive" *ngIf="monDuPreCol !='noVali'">
+                <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                  <thead class="text-center">
+                    <tr>
+                      <th scope="col">Nbr d'année</th>
+                      <th scope="col">Nouvelle Mensualité</th>
+                      <th scope="col">Gain</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+
+                    </tr>
+                  </thead>
+                  <tbody class="text-center">
+                    <tr *ngFor="let j of testTab1; let o = index">
+                      <th scope="row">{{j.ans}} </th>
+                      <td> {{ keyup6(j.ans , o) }}</td>
+                      <td>{{gainN}}</td>
+
+                      <td class="text-left" *ngIf=" j.revCol != '' || j.restAvivre != '' || j.testAge !='' "><img
+                          src="../../../../../assets/images/avatars/non.png">&nbsp;{{j.restAvivre}} <span
+                          *ngIf="j.revCol != ''  ">&</span> {{j.revCol}} <span
+                          *ngIf="j.testAge != '' && j.restAvivre != '' ">&</span> {{ j.testAge}}</td>
+                      <td class="text-left" *ngIf=" j.revCol == '' && j.restAvivre == '' && j.testAge == '' "><img
+                          src="../../../../../assets/images/avatars/oui.png">&nbsp;Dossier réalisable</td>
+
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</div>

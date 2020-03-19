@@ -1,0 +1,66 @@
+<div class="app-page-title">
+  <div class="page-title-wrapper">
+    <div class="page-title-heading">
+    
+      <div>
+        Modifier vos informations
+     
+      </div>
+    </div>
+    <div class="page-title-actions">
+    
+      <button type="button" (click)="editPro()" class="btn-shadow d-inline-flex align-items-center btn btn-success">
+        <fa class="mr-2" name="plus"></fa>
+        Valider
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="card main-card mb-3">
+  <div class="card-header">
+    Profile 
+  </div>
+  <div class="card-body">
+    <form class="form-horizontal" [formGroup]="proForm">
+      <div class="form-group">
+        <label for="1" class="col-sm-4 control-label">Nom</label>
+        <div class="col-sm-8 input-group">
+          <input
+           
+            name="phone"
+          formControlName="nom"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="2" class="col-sm-4 control-label">
+          Prénom
+        </label>
+        <div class="col-sm-8 input-group">
+          <input
+            id="2"
+            name="phoneWithValue"
+            formControlName="prenom"
+
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="3" class="col-sm-4 control-label">
+          Photo de profile
+        </label>
+        <div >
+          <input type="file" (change)="onSelectFile($event)">
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

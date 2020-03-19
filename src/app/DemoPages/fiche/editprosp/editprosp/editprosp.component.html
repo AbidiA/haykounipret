@@ -1,0 +1,233 @@
+<div class="row">
+
+    <div class="col-1"></div>
+    <div class="col-5">
+
+
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+
+                <form class="container mb-3 mt-3" [formGroup]="prosForm">
+
+
+
+
+
+
+
+
+                    <h5>Emprunteur</h5>
+
+                    <div class="example-container">
+
+                        <mat-form-field>
+                            <mat-label>Civilité</mat-label>
+                            <mat-select formControlName="civilite_e" [(ngModel)]="t1.civilite_e">
+                                <mat-option value="Mr">Mr</mat-option>
+                                <mat-option value="Mme">Mme</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="example-container">
+
+                        <mat-form-field>
+                            <input matInput placeholder="Nom" formControlName="nom_e" [(ngModel)]="t1.nom_e">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+
+                        <mat-form-field>
+                            <input matInput placeholder="Prénom" formControlName="prenom_e" [(ngModel)]="t1.prenom_e">
+                        </mat-form-field>
+                    </div>
+                    <div class="example-container">
+
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="picker" placeholder="Date de Naissance"
+                                [(ngModel)]="t1.dateness_e" formControlName="dateness_e">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="example-container">
+
+                        <mat-form-field>
+
+                            <input matInput placeholder="Téléphone Portable" formControlName="telp_e"
+                                [(ngModel)]="t1.telp_e">
+                        </mat-form-field>
+                    </div>
+                    <div class="example-container">
+
+                        <mat-form-field>
+                            <input matInput placeholder="Adresse Mail" formControlName="mail_e" [(ngModel)]="t1.mail_e">
+                        </mat-form-field>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-5" *ngIf="co == 'Oui'">
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+
+                <form class="container mb-3 mt-3" [formGroup]="prosForm">
+
+                    <div  >
+
+                        <h5>Co-emprunteur</h5>
+
+
+                        <div class="example-container">
+
+                            <mat-form-field>
+                                <mat-label>Civilité</mat-label>
+                                <mat-select formControlName="civilite_co" [(ngModel)]="t1.civilite_co">
+                                    <mat-option value="Mr">Mr</mat-option>
+                                    <mat-option value="Mme">Mme</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Nom" formControlName="nom_co" [(ngModel)]="t1.nom_co">
+                            </mat-form-field>
+                        </div>
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Prénom" formControlName="prenom_co"
+                                    [(ngModel)]="t1.prenom_co">
+                            </mat-form-field>
+                        </div>
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput [matDatepicker]="picker" placeholder="Date de Naissance"
+                                    [(ngModel)]="t1.dateness_co" formControlName="dateness_co">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+
+                                <input matInput placeholder="Téléphone Portable" formControlName="telp_co"
+                                    [(ngModel)]="t1.telp_co">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Adresse Mail" formControlName="mail_co"
+                                    [(ngModel)]="t1.mail_co">
+                            </mat-form-field>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-1"></div>
+
+<div class="col-10">
+
+    <div class="main-card mb-3 card">
+        <div class="card-body">
+
+            <form class="container mb-3 mt-3" [formGroup]="prosForm">
+
+
+
+
+
+               
+
+                        <div class="example-container">
+
+                            <mat-form-field>
+                                <mat-label>Situation famille</mat-label>
+                                <mat-select formControlName="situationfamille" [(ngModel)]="t1.situationfamille">
+                                    <mat-option value="Marié">Marié</mat-option>
+                                    <mat-option value="Célibataire">Célibataire</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+
+
+
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Adresse" formControlName="adresse"
+                                    [(ngModel)]="t1.adresse">
+
+                            </mat-form-field>
+
+                        </div>
+
+
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Code Postal" formControlName="codepostal"
+                                    [(ngModel)]="t1.codepostal">
+
+                            </mat-form-field>
+
+                        </div>
+
+
+                        <div class="example-container">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Ville" formControlName="ville" [(ngModel)]="t1.ville">
+
+                            </mat-form-field>
+
+                        </div>
+
+
+
+               
+
+
+
+
+
+
+
+            </form>
+
+
+
+        </div>
+    </div>
+
+    <div class="page-title-actions" style="text-align: center;">
+
+
+
+        <button type="button" (click)="addPros()"
+            class="btn-shadow d-inline-flex align-items-center btn btn-success ml-2 mb-2">Enregistrer</button>
+
+    </div>
+</div>
+</div>

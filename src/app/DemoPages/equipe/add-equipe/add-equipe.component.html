@@ -1,0 +1,60 @@
+<div class="app-page-title">
+  <div class="page-title-wrapper">
+    <div class="page-title-heading">
+    
+      <div>
+        Nouvelle Equipe
+     
+      </div>
+    </div>
+    <div class="page-title-actions">
+    
+      <button type="button" (click)="change()" class="btn-shadow d-inline-flex align-items-center btn btn-success">
+        <fa class="mr-2" name="plus"></fa>
+        Valider
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+<div class="col-3"></div>
+<div class="col-6">
+<div class="card main-card mb-3">
+  <div class="card-header">
+    Equipe 
+  </div>
+  <div class="card-body">
+    <form class="form-horizontal" >
+      <div class="form-group">
+        <label for="1" class="col-sm-4 control-label" >Nom d'équipe</label>
+        <div class="col-sm-4 input-group">
+          <input
+           
+            name="phone"
+            [(ngModel)]="nomEquipe"  [ngModelOptions]="{standalone: true}"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+     
+
+      <div class="form-group">
+        <div class="col-10 input-group">
+
+        <mat-form-field>
+          <mat-label>Liste des utilisateurs</mat-label>
+          <mat-select multiple [(ngModel)]="listAffect"  [ngModelOptions]="{standalone: true}">
+            <mat-option *ngFor="let i of listUser" [value]="i.username">{{i.username}} | {{i.role}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>

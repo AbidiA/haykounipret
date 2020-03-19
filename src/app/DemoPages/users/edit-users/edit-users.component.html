@@ -1,0 +1,175 @@
+<div class="app-page-title">
+  <div class="page-title-wrapper">
+   
+    <div class="widget-content-left mr-3">
+      <div class="widget-content-left">
+        <img width="40" class="rounded-circle" src="https://www.back.hayko-crm.dev/{{pathPhoto}}" alt="">
+      </div>
+    </div>
+   
+    <div class="page-title-heading">
+    
+      <div>
+        Informations : {{nom }} {{prenom }}
+     
+      </div>
+    </div>
+
+
+    <div class="page-title-actions">
+    
+      <button type="button" (click)="editUser()" class="btn-shadow d-inline-flex align-items-center btn btn-success">
+        <fa class="mr-2" name="plus"></fa>
+        Valider
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="card main-card mb-3">
+  <div class="card-header">
+    Utilisateur 
+  </div>
+  <div class="card-body">
+    <form class="form-horizontal" >
+      <div class="form-group">
+        <label for="1" class="col-sm-4 control-label">Username</label>
+        <div class="col-sm-8 input-group">
+          <input
+
+            name="phone"
+            type="text"
+            class="form-control"
+            [(ngModel)]="username" [ngModelOptions]="{standalone: true}"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="2" class="col-sm-4 control-label">
+          Password
+        </label>
+        <div class="col-sm-8 input-group">
+          <input
+            id="2"
+            name="phoneWithValue"
+            [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="3" class="col-sm-4 control-label">
+          Role
+        </label>
+        <div class="col-sm-8 input-group">
+          <select class="form-control"  [(ngModel)]="role_id" [ngModelOptions]="{standalone: true}" >
+            <option value="1">Admin</option>
+            <option value="2">Responsable</option>
+            <option value="3">Direction</option>
+            <option value="4">Collaborateur</option>
+            <option value="5">Super Admin</option>
+            <option value="6">Precepteur</option>
+            <option value="7">Collaborateur 2</option>
+
+
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="main-card mb-3 card">
+  <div class="card-header mt-3">
+    <div class="widget-content-right flex2 ">
+      <div class="widget-heading"> <strong>Accès aux contacts</strong></div>
+      <div class="widget-subheading opacity-7  mb-3">
+         Tous les utilisateurs ont un niveau d'accès de base. Les autorisations ci-dessous s'appliquent aux contacts, entreprises et tâches</div>
+    </div>  
+    <div class="btn-actions-pane-right">
+      <div role="group" class="btn-group-sm btn-group">
+        
+      </div>
+    </div>
+   
+   
+  </div>
+  <div class="table-responsive">
+    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+      <thead>
+     
+      <tbody>
+      <tr>
+        <td class=" text-muted"> 
+          <div class="widget-content-left flex2">
+            <div class="widget-heading">Afficher</div>
+            <div class="widget-subheading opacity-7">Contrôlez l'ensemble des contact, des entreprise et tâches</div>
+          </div>  
+        </td>
+        
+        
+        <td class="text-center">
+
+          <select class="form-control" id="" [(ngModel)]="afficher">
+            <option value="Tout">Tout</option>
+            <option value="Equipe uniquement">Equipe uniquement</option>
+            <option value="Propriétaire uniquement">Propriétaire uniquement</option>
+
+          </select>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td class=" text-muted"> 
+          <div class="widget-content-left flex2">
+            <div class="widget-heading">Communiquer</div>
+            <div class="widget-subheading opacity-7">Contrôlez l'ensemble des contact, des entreprise et tâches</div>
+          </div>  
+        </td>
+        
+        
+        <td class="text-center">
+
+          <select class="form-control" id="" [(ngModel)]="communiquer">
+            <option value="Tout">Tout</option>
+            <option value="Equipe uniquement">Equipe uniquement</option>
+            <option value="Propriétaire uniquement">Propriétaire uniquement</option>
+
+          </select>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td class=" text-muted"> 
+          <div class="widget-content-left flex2">
+            <div class="widget-heading">Modifier</div>
+            <div class="widget-subheading opacity-7">Contrôlez l'ensemble des contact, des entreprise et tâches</div>
+          </div>  
+        </td>
+        
+        
+        <td class="text-center">
+
+          <select class="form-control" id="" [(ngModel)]="modifier">
+            <option value="Tout">Tout</option>
+            <option value="Equipe uniquement">Equipe uniquement</option>
+            <option value="Propriétaire uniquement">Propriétaire uniquement</option>
+
+          </select>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+  <div class="d-block text-center card-footer">
+   
+  </div>
+</div>

@@ -1,0 +1,101 @@
+<div class="h-100">
+  <div class="row h-100 no-gutters">
+    <div class="h-100 d-md-flex d-sm-block bg-white justify-content-center align-items-center col-md-12 col-lg-7">
+      <div class="mx-auto app-login-box col-sm-12 col-md-10 col-lg-9">
+        <div >
+          <img src="../../../../assets/images/avatars/logo.png" style="width: 25%;height: 25%;" alt="">
+        </div>
+       
+        <div>
+          <form #f="ngForm">
+            <div  class="row">
+              <div class="col-md-6">
+               
+
+                <div class="example-container"  style=" width: 100%;   display: flex;
+                flex-direction: column;">
+
+                  <mat-form-field>
+                      <mat-label>Role</mat-label>
+                      <mat-select [(ngModel)]="role" [ngModelOptions]="{standalone: true}" >
+                          <mat-option value="1">Admin</mat-option>
+                          <mat-option value="2">Responsable</mat-option>
+                          <mat-option value="3">Direction</mat-option>
+                          <mat-option value="4">Collaborateur</mat-option>
+                          <mat-option value="5">Super Admin</mat-option>
+
+                      </mat-select>
+                  </mat-form-field>
+              </div>
+
+              </div>
+              <div class="col-md-6">
+             
+                <div class="example-container" style=" width: 100%;   display: flex;
+                flex-direction: column;">
+
+                  <mat-form-field style="margin-bottom: 20px; margin: 5px 0;"> 
+                      <input matInput placeholder="Nom d'utilisateur  ici ..." type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" >
+                  </mat-form-field>
+              </div>
+
+              </div>
+
+              <div class="col-md-6">
+
+
+                <div class="example-container" style=" width: 100%;   display: flex;
+                flex-direction: column;">
+
+                  <mat-form-field style="margin-bottom: 20px; margin: 5px 0;"> 
+                      <input matInput placeholder="Mot de passe ici ..." type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" >
+                  </mat-form-field>
+              </div>
+
+                
+              </div>
+             
+            </div>
+   
+            <div class="mt-4 d-flex align-items-center">
+              <div class="ml-auto">
+                <button  type="button"
+                        class="btn btn-wide btn-pill btn-shadow btn-hover-shine btn-secondary btn-lg" (click)="addUser()">Créer Compte
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-5">
+      <div class="slider-light">
+        <ngx-slick-carousel class="slick-slider slick-dotted" #slickModal="slick-carousel"
+                            [config]="slideConfig2">
+          <div ngxSlickItem>
+            <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-plum-plate">
+              <div class="slide-img-bg"></div>
+              <div class="slider-content text-light"> 
+                <img src="../../../../assets/images/avatars/log.png" style="width: 100%;height: 100%;" alt=""></div>
+            </div>
+          </div>
+          <div ngxSlickItem>
+            <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-premium-dark">
+              <div class="slide-img-bg"></div>
+              <div class="slider-content text-light"> 
+                <img src="../../../../assets/images/avatars/log.png" style="width: 100%;height: 100%;" alt="">
+              </div>
+            </div>
+          </div>
+          <div ngxSlickItem>
+            <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-sunny-morning">
+              <div class="slide-img-bg opacity-6"></div>
+              <div class="slider-content text-light">
+                 <img src="../../../../assets/images/avatars/log.png" style="width: 100%;height: 100%;" alt=""></div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</div>

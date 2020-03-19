@@ -1,0 +1,732 @@
+<div class="app-page-title">
+    <div class="page-title-wrapper">
+
+        <div class="widget-content-left mr-3">
+
+        </div>
+
+        <div class="page-title-heading">
+
+            <div>
+                Fiche Qualification
+
+            </div>
+        </div>
+
+
+        <div class="page-title-actions">
+
+
+
+            <button type="button" (click)="addQual()"
+                class="btn-shadow d-inline-flex align-items-center btn btn-success ml-2">Enregistrer</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-lg-2" >
+        <div class="main-card mb-3 card" style="position: fixed;margin-right: 12px;margin-bottom: auto;" >
+            <div class="card-body">
+                <form class="container mb-3 mt-3" [formGroup]="qualForm">
+
+                <div class="example-container">
+
+                    <mat-form-field>
+                        <textarea matInput matTextareaAutosize matAutosizeMinRows="16"
+                        matAutosizeMaxRows="100" formControlName="note"
+                            placeholder="Notes " ></textarea>
+                    </mat-form-field>
+                </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-1"></div>
+    <div class="col-lg-8" style="margin-left: 10px;margin-bottom: auto">
+
+
+        <div class="main-card mb-3 card" >
+            <div class="card-body">
+
+
+                <form class="container mb-3 mt-3" [formGroup]="qualForm">
+
+
+
+                    <div class="row mt-4">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <h5>Emprunteur</h5>
+                            <hr style="border:1px solid ;">
+
+                        </div>
+                        <div class="col-5">
+                            <h5>Co-emprunteur</h5>
+                            <hr style="border:1px solid ;">
+
+                        </div>
+
+                    </div>
+
+                   
+                    <div class="row mt-2">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <mat-label>Nombre enfants à charge</mat-label>
+                                    <mat-select formControlName="nb_enfantsach">
+                                        <mat-option value="1">1</mat-option>
+                                        <mat-option value="2">2</mat-option>
+                                        <mat-option value="3">3</mat-option>
+                                        <mat-option value="4">4</mat-option>
+                                        <mat-option value="5">5</mat-option>
+
+                                        <mat-option value="6">6</mat-option>
+                                        <mat-option value="7">7</mat-option>
+                                        <mat-option value="8">8</mat-option>
+                                        <mat-option value="9">9</mat-option>
+                                        <mat-option value="10">10</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <mat-label>Status habitation</mat-label>
+                                    <mat-select formControlName="status_habitation">
+                                        <mat-option value="1">Hébérger</mat-option>
+                                        <mat-option value="2">Locataire</mat-option>
+                                        <mat-option value="3">propriétaire</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-2"></div>
+
+                        <div class="col-4">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <mat-label>Status professionnelle</mat-label>
+                                    <mat-select formControlName="status_professionnelle">
+                                        <mat-option value="CDI">CDI</mat-option>
+                                        <mat-option value="CDD / INTERIM">CDD / INTERIM</mat-option>
+                                        <mat-option value="TNS >= 2 AN">TNS >= 2 ANS</mat-option>
+                                        <mat-option value="TNS  2 ANS">TNS 2 ANS</mat-option>
+                                        <mat-option value="SANS EMPLOI">SANS EMPLOI</mat-option>
+                                        <mat-option value="CONGE PARENTALE">CONGE PARENTALE</mat-option>
+                                        <mat-option value="RETRAITE">RETRAITE</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-4">
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <mat-label>Status professionnelle</mat-label>
+                                    <mat-select formControlName="status_professionnelleco">
+                                        <mat-option value="CDI">CDI</mat-option>
+                                        <mat-option value="CDD / INTERIM">CDD / INTERIM</mat-option>
+                                        <mat-option value="TNS >= 2 AN">TNS >= 2 ANS</mat-option>
+                                        <mat-option value="TNS  2 ANS">TNS 2 ANS</mat-option>
+                                        <mat-option value="SANS EMPLOI">SANS EMPLOI</mat-option>
+                                        <mat-option value="CONGE PARENTALE">CONGE PARENTALE</mat-option>
+                                        <mat-option value="RETRAITE">RETRAITE</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+</form>
+            </div></div>
+
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+    
+    
+                <form class="container mb-3 mt-3" [formGroup]="qualForm">
+
+
+                    <div class="alert alert-success"><h3>Revenus</h3> </div>
+
+
+                    <div class="row mt-4">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <h5>Emprunteur</h5>
+                            <hr style="border:1px solid ;">
+
+                        </div>
+                        <div class="col-5">
+                            <h5>Co-emprunteur</h5>
+                            <hr style="border:1px solid ;">
+
+                        </div>
+
+                    </div>
+
+                   
+
+                    <div class="row">
+                        <div class="col-2"></div>
+
+
+
+
+
+                        <div class="col-md-4 ">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="revenusmoisnet_e"
+                                        placeholder="Revenus Net par mois  €" #box1 (keyup)="keyup1(box1.value)">
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-md-4 ">
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="revenusmoisnet_co"
+                                        placeholder="Revenus Net par mois  €" #box2 (keyup)="keyup2(box2.value)" >
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2"></div>
+
+                        <div class="col-8">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="fancier" placeholder="Allocation Familiales  €"
+                                        #box3 (keyup)="keyup3(box3.value)">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="caf" placeholder="CAF  €" #box4
+                                        (keyup)="keyup4(box4.value)">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="autre" placeholder="Autres  €" #box5
+                                        (keyup)="keyup5(box5.value)">
+                                </mat-form-field>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-5">
+
+                        <div class="col-5">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput readonly [(ngModel)]="revenu" placeholder="Total Revenus  €"
+                                        formControlName="total_revenus" >
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+</form>
+                </div>
+            </div>
+
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+    
+    
+                <form class="container mb-3 mt-3" [formGroup]="qualForm">
+                  
+                 
+
+                    <div class="alert alert-success"><h3>Charges</h3> </div>
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-2"></div>
+
+                        <div class="col-md-8 ">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="loyer" placeholder="Loyer  €" #box6
+                                        (keyup)="keyup6(box6.value)">
+                                </mat-form-field>
+                            </div>
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="pensionalimentaire_verse" #box7
+                                        (keyup)="keyup7(box7.value)" placeholder="Pension Alimentaire Versée  €">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="autres" #box8 (keyup)="keyup8(box8.value)"
+                                        placeholder="Autres  €">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="row mt-5">
+
+                        <div class="col-5">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="total_charges" placeholder="Total Charge  €"
+                                        [(ngModel)]="charges" readonly>
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+    
+    
+                <form class="container mb-3 mt-3" [formGroup]="qualForm">
+             
+                    <div class="alert alert-success"><h3>Valeur Immobilier</h3> </div>
+
+                    <div class="row">
+                        <div class="col-2"></div>
+
+                        <div class="col-8">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="residance_principale"
+                                        placeholder="Residance principale €">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="residence_locative"
+                                        placeholder="Residence locative €">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="residance_secondaire"
+                                        placeholder="Residance secondaire €">
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="row mt-5">
+                        <div class="col-2"></div>
+
+                        <div class="col-8">
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="fichage_banquedefrance" placeholder="Fichage BDF">
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </form>
+                </div>
+            </div>
+
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+    
+    
+                <form class="container mb-3 mt-3" [formGroup]="qualForm">
+
+                    <form #addressForm="ngForm" class="container mt-3">
+                        <div class="alert alert-success"><h3>Crédits</h3> </div>
+
+                        <div class="row justify-content-center">
+
+                            <div class="col-12">
+
+                                <section class="container border mb-4 p-3"
+                                    *ngFor="let address of addresses; let i = index;">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h4>Crédit {{i + 1}}</h4>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <button type="button" class="btn btn-outline-light mb-2"
+                                                (click)="removeAddress(i)"><img
+                                                    src="../../../../../assets/images/avatars/delete.png"
+                                                    style="width:15px" /></button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-4">
+
+                                            <div class="example-container">
+
+                                                <mat-form-field>
+                                                    <mat-label>Type crédit</mat-label>
+                                                    <mat-select [(ngModel)]="address.type" name="type_{{i}}">
+                                                        <mat-option value="Immobilier">Immobilier</mat-option>
+                                                        <mat-option value="Renouvelable">Renouvelable</mat-option>
+                                                        <mat-option value="Personnel">Personnel</mat-option>
+                                                        <mat-option value="Travaux">Travaux</mat-option>
+                                                        <mat-option value="Consommation">Consommation</mat-option>
+
+                                                        <mat-option value="Moto">Moto</mat-option>
+                                                        <mat-option value="Rachat de credit">Rachat de credit
+                                                        </mat-option>
+                                                        <mat-option value="Dette diverse">Dette diverse</mat-option>
+                                                        <mat-option value="Découvert bancaire">Découvert bancaire
+                                                        </mat-option>
+                                                        <mat-option value="Autres">Autres</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="col-4">
+
+                                            <div class="example-container">
+
+                                                <mat-form-field>
+                                                    <input matInput [(ngModel)]="address.organisme"
+                                                        name="organisme{{i}}" placeholder="Organisme">
+                                                </mat-form-field>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="col-4">
+
+                                            <div class="example-container">
+
+                                                <mat-form-field>
+                                                    <input matInput [(ngModel)]="address.crd" name="crd{{i}}"
+                                                        placeholder="CRD  €" >
+                                                </mat-form-field>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-4">
+
+                                            <div class="example-container">
+
+                                                <mat-form-field>
+                                                    <input matInput [(ngModel)]="address.mensualite"  
+                                                        name="mensualite{{i}}" placeholder="Mensualité  €">
+                                                </mat-form-field>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div class="col-4">
+
+                                            <div class="example-container">
+
+                                                <mat-form-field>
+                                                    <input matInput [(ngModel)]="address.mensualiteretard"
+                                                        name="mensualiteretard{{i}}"
+                                                        placeholder="Mensualité en retard  €">
+                                                </mat-form-field>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="col-4">
+
+                                            <div class="example-container">
+
+                                                <mat-form-field>
+                                                    <mat-label>à Racheter</mat-label>
+                                                    <mat-select [(ngModel)]="address.aracheter" name="aracheter{{i}}">
+                                                        <mat-option value="oui">Oui</mat-option>
+                                                        <mat-option value="non">Non</mat-option>
+
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </section>
+
+
+                            </div>
+                        </div>
+                        <button type="button" style="border: none;" class="btn btn-outline-light mb-2"
+                            (click)="addAddress()"><img src="../../../../../assets/images/avatars/plus.png"
+                                style="width:30px" /></button>
+
+                    </form>
+
+
+                    <div class="row">
+                        <div class="col-2"></div>
+
+                        <div class="col-8">
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="tresorerie"  placeholder="Trésorerie  €">
+                                </mat-form-field>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="page-title-actions text-center mb-2" *ngIf="x==0">
+
+
+                <h6 class="mt-2 mb-2">(cliquez pour obtenir un récapitulatif)</h6>
+
+                <button type="button" (click)="keyup()"
+                    class="btn-shadow d-inline-flex align-items-center btn btn-success ml-2">Récapitulatif</button>
+            </div>
+
+
+            <div class="main-card mb-3 card" *ngIf="x==1">
+                <div class="card-body">
+    
+    
+                <form class="container mb-3 mt-3" [formGroup]="qualForm">
+               
+
+                    <div class="alert alert-success"><h3>Récapitulatif</h3> </div>
+
+                    <div class="row mt-4">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <h5>Par mois</h5>
+                            <hr style="border:1px solid ;">
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="totalcreditimmobilier_parmois"
+                                        placeholder="Total crédit immobilier €" [(ngModel)]="mensu">
+                                </mat-form-field>
+                            </div>
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="totalcreditconsommation_parmois"
+                                        placeholder="Total crédit consommation €"  [(ngModel)]="mensu1">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="totalcredit_parmois" placeholder="Total crédit €" [(ngModel)]="totalMensu">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="endettementavant_parmois"
+                                        placeholder="Endettement avant €">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="endettementapres_parmoissarter"
+                                        placeholder="Endettement après  sarter €">
+                                </mat-form-field>
+                            </div>
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="endettementapres_parmoisprime"
+                                        placeholder="Endettement après  prime  €">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <h5>CRD</h5>
+                            <hr style="border:1px solid ;">
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="totalcreditimmobilier_crd"
+                                        placeholder="Total crédit immobilier €"  [(ngModel)]="crd">
+                                </mat-form-field>
+                            </div>
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="totalcreditconsommation_crd"
+                                        placeholder="Total crédit consommation €"  [(ngModel)]="crd1">
+                                </mat-form-field>
+                            </div>
+
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="totalcredit_crd" placeholder="Total crédit €" [(ngModel)]="totalCrd">
+                                </mat-form-field>
+                            </div>
+
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="endettementavant_crd"
+                                        placeholder="Endettement avant €">
+                                </mat-form-field>
+                            </div>
+
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="endettementapres_crdsarter"
+                                        placeholder="Endettement après  sarter €">
+                                </mat-form-field>
+                            </div>
+
+
+
+                            <div class="example-container">
+
+                                <mat-form-field>
+                                    <input matInput formControlName="endettementapres_crdprime"
+                                        placeholder="Endettement après  prime €">
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

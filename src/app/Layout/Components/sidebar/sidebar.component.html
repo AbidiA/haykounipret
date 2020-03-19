@@ -1,0 +1,132 @@
+<div [class]="'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme" (mouseover)="sidebarHover()"
+     (mouseout)="sidebarHover()">
+  <div class="app-header__logo">
+    <div >
+      <img style="    width: 160px;height: 45px;" src="../../../../assets/images/avatars/logo.png" >
+    </div>
+    <div class="header__pane ml-auto">
+      <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+              [ngClass]="{'is-active' : globals.toggleSidebar}" (click)="toggleSidebar()">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="app-sidebar-content">
+    <div class="app-sidebar-scroll">
+      <perfect-scrollbar>
+        <div class="v-sidebar-menu vsm-default">
+          <div class="vsm-list">
+            <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" [activeIds]="extraParameter">
+            
+            
+            
+            
+            
+              <ngb-panel>
+                <ng-template ngbPanelHeader>
+                  <div class="vsm-header">UNIPRET</div>
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel >
+                <ng-template ngbPanelHeader>
+                  <button ngbPanelToggle class="vsm-link">
+                    <i class="vsm-icon pe-7s-browser"></i>
+                    <span class="vsm-title">Fiches</span>
+                    <i class="vsm-arrow"></i>
+                  </button>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div class="vsm-dropdown">
+                    <div class="vsm-list">
+                      <div class="vsm-item"><a routerLink="/ficheProspet" routerLinkActive="active-item"
+                                               [routerLinkActiveOptions]="{exact: true}" class="vsm-link"><span
+                        class="vsm-title">Ajouter Fiche</span></a>
+                      </div>
+                    
+                  
+                      <div class="vsm-item">
+                        <a routerLink="/listFiche" routerLinkActive="active-item" class="vsm-link"><span
+                          class="vsm-title">Liste des fiches</span></a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+            
+            
+          
+              <ngb-panel >
+                <ng-template ngbPanelHeader>
+                  <button ngbPanelToggle class="vsm-link">
+                    <i class="vsm-icon pe-7s-browser"></i>
+                    <span class="vsm-title">Utilisateurs</span>
+                    <i class="vsm-arrow"></i>
+                  </button>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div class="vsm-dropdown">
+                    <div class="vsm-list">
+                      <div class="vsm-item"><a routerLink="/users/listUsers" routerLinkActive="active-item"
+                                               [routerLinkActiveOptions]="{exact: true}" class="vsm-link"><span
+                        class="vsm-title">Liste des Utilisateurs</span></a>
+                      </div>
+                    
+                      <div class="vsm-item"><a routerLink="/pages/register" routerLinkActive="active-item"
+                        [routerLinkActiveOptions]="{exact: true}" class="vsm-link"><span
+                          class="vsm-title">Ajouter utilisateur</span></a>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+            
+              
+
+            
+              <ngb-panel >
+                <ng-template ngbPanelHeader>
+                  <button ngbPanelToggle class="vsm-link">
+                    <i class="vsm-icon pe-7s-browser"></i>
+                    <span class="vsm-title">Equipes</span>
+                    <i class="vsm-arrow"></i>
+                  </button>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div class="vsm-dropdown">
+                    <div class="vsm-list">
+                      <div class="vsm-item"><a routerLink="/equipe/list" routerLinkActive="active-item"
+                                               [routerLinkActiveOptions]="{exact: true}" class="vsm-link"><span
+                        class="vsm-title">Liste des Equipes</span></a>
+                      </div>
+                    
+                  
+                      
+                      
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+            
+            
+            
+             
+           
+             
+           
+              
+             
+            </ngb-accordion>
+           
+          
+          
+          </div>
+        </div>
+      </perfect-scrollbar>
+    </div>
+  </div>
+</div>

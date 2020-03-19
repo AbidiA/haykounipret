@@ -1,0 +1,66 @@
+<div class="app-page-title">
+  <div class="page-title-wrapper">
+    <div class="page-title-heading">
+    
+      <div>
+        UNIPRET EQUIPES
+     
+      </div>
+    </div>
+    <div class="page-title-actions">
+    
+      <button type="button" [routerLink]="'/equipe/add'" class="btn-shadow d-inline-flex align-items-center btn btn-success">
+        <fa class="mr-2" name="plus"></fa>
+        Ajouter
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-md-12 col-lg-6 col-xl-4" *ngFor = "let i of listEquipe">
+    <div class="card-shadow-primary card-border mb-3 card">
+      <div class="dropdown-menu-header">
+        <div class="dropdown-menu-header-inner bg-primary">
+          <div class="menu-header-image" style="background-image: url('./assets/images/dropdown-header/city2.jpg');">
+          </div>
+          <div class="menu-header-content">
+            <div class="avatar-icon-wrapper avatar-icon-lg">
+              <div class="avatar-icon rounded btn-hover-shine"><img src="./assets/images/avatars/team.jpg" alt="Avatar 5">
+              </div>
+            </div>
+            <div>
+              <h5 class="menu-header-title">{{i.equipe}}</h5>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <div class="scroll-area-sm">
+        <perfect-scrollbar [autoPropagation]="true">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let x of i.users">
+              <div class="widget-content p-0">
+                <div class="widget-content-wrapper">
+                  <div class="widget-content-left center-elem mr-2"><i class="pe-7s-file text-muted fsize-2"></i></div>
+                  <div class="widget-content-left">
+                    <div class="widget-heading">{{x.username}} | {{x.role}}</div>
+                  </div>
+                 
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </perfect-scrollbar>
+      </div>
+      <div class="text-center d-block card-footer">
+
+        <button class="border-0 btn-transition btn btn-outline-success" (click)="edit(i)">Afficher</button>
+      </div>
+    </div>
+  </div>
+</div>

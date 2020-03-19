@@ -1,0 +1,72 @@
+<ul class="header-megamenu nav">
+ 
+ 
+  <li class="nav-item">
+    <div  class="dropdown-menu-rounded btn-group" ngbDropdown>
+      <button type="button" class="btn btn-link" ngbDropdownToggle>
+        <span>
+          <i class="nav-link-icon pe-7s-settings"></i>
+          Paramétres
+        </span>
+      </button>
+      <div class="dropdown-menu-lg" ngbDropdownMenu>
+        <div class="dropdown-menu-header">
+          <div class="dropdown-menu-header-inner bg-success">
+            <div class="menu-header-image opacity-1 dd-header-bg-3"></div>
+            <div class="menu-header-content text-left">
+              <h5 class="menu-header-title">Paramétres</h5>
+              <h6 class="menu-header-subtitle">afficher et modifier</h6>
+              <div class="menu-header-btn-pane">
+                <button [routerLink]="'/displayParam'" class="btn-icon btn-icon-only btn btn-warning btn-sm">
+                  <i class="pe-7s-config btn-icon-wrapper"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> </div>
+    </div>
+  </li>
+</ul>
+
+
+<ng-template #headerMegaPopover>
+  <div class="dropdown-mega-menu">
+    <div class="grid-menu grid-menu-3col">
+      <div class="no-gutters row">
+        <div class="col-sm-6 col-xl-4">
+          <ul class="nav flex-column">
+            <li class="nav-item-header nav-item">Overview</li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link"><i class="nav-link-icon lnr-inbox"></i><span>Contacts</span></a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link"><i class="nav-link-icon lnr-book"></i><span>Incidents</span>
+              <div class="ml-auto badge badge-pill badge-danger">5</div>
+            </a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link"><i class="nav-link-icon lnr-picture"></i><span>Companies</span></a></li>
+            <li class="nav-item"><a disabled="disabled" [routerLink]="" class="nav-link disabled"><i class="nav-link-icon lnr-file-empty"></i><span>Dashboards</span></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-xl-4">
+          <ul class="nav flex-column">
+            <li class="nav-item-header nav-item">Favourites</li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Reports Conversions</a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Quick Start
+              <div class="ml-auto badge badge-success">New</div>
+            </a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Users &amp; Groups</a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Proprieties</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-xl-4">
+          <ul class="nav flex-column">
+            <li class="nav-item-header nav-item">Sales &amp; Marketing</li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Queues</a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Resource Groups</a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Goal Metrics
+              <div class="ml-auto badge badge-warning">3</div>
+            </a></li>
+            <li class="nav-item"><a [routerLink]="" class="nav-link">Campaigns</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

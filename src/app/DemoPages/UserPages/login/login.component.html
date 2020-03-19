@@ -1,0 +1,86 @@
+<div class="h-100">
+  <div class="row h-100 no-gutters">
+    <div class="d-none d-lg-block col-lg-4">
+      <div class="slider-light">
+        <ngx-slick-carousel class="slick-slider slick-dotted" #slickModal="slick-carousel"
+                            [config]="slideConfig2">
+          <div ngxSlickItem>
+            <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-plum-plate">
+              <div class="slide-img-bg"></div>
+              <div class="slider-content text-light"> 
+                <img src="../../../../assets/images/avatars/log.png" style="width: 100%;height: 100%;" alt=""></div>
+            </div>
+          </div>
+          <div ngxSlickItem>
+            <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-premium-dark">
+              <div class="slide-img-bg"></div>
+              <div class="slider-content text-light"> 
+                <img src="../../../../assets/images/avatars/log.png" style="width: 100%;height: 100%;" alt="">
+              </div>
+            </div>
+          </div>
+          <div ngxSlickItem>
+            <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-sunny-morning">
+              <div class="slide-img-bg opacity-6"></div>
+              <div class="slider-content text-light">
+                 <img src="../../../../assets/images/avatars/log.png" style="width: 100%;height: 100%;" alt=""></div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+    <div class="h-100 d-flex bg-white justify-content-center align-items-center col-md-12 col-lg-8">
+      <div class="mx-auto app-login-box col-sm-12 col-md-10 col-lg-9">
+        <div >        
+            <img src="../../../../assets/images/avatars/logo.png" style="width: 50%;height: 50%;" alt="">
+        </div>
+     
+
+        <div class="divider"></div>
+        <div>
+          <form [formGroup]="logForm">
+            <div  class="row">
+              <div class="col-md-6">
+                <fieldset class="form-group">
+                  <div tabindex="-1" role="group">
+
+
+                                                                                                <div class="example-container" style=" width: 100%;   display: flex;
+                                                                                                flex-direction: column;">
+
+                                                                                                  <mat-form-field style="margin-bottom: 20px; margin: 5px 0;">
+                                                                                                      <input matInput placeholder="username ici ..." formControlName="username" >
+                                                                                                  </mat-form-field>
+                                                                                              </div>
+                    </div>
+                </fieldset>
+              </div>
+              <div class="col-md-6">
+                <fieldset class="form-group">
+                  <div tabindex="-1" role="group">
+                  
+                    <div class="example-container" style=" width: 100%;   display: flex;
+                    flex-direction: column;">
+
+                      <mat-form-field style="margin-bottom: 20px; margin: 5px 0;"> 
+                          <input matInput placeholder="mot de passe ici ..." type="password" formControlName="password" >
+                      </mat-form-field>
+                  </div>
+                  
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          
+            <div class="divider"></div>
+            <div class="d-flex align-items-center">
+              <div class="ml-auto">
+                <button type="submit" (click)="login()" class="btn btn-primary btn-lg">Login to CRM</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

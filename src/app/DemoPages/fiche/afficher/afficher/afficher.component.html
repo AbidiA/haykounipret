@@ -1,0 +1,43 @@
+
+
+
+<div class="main-card mb-3 card">
+  <div class="card-header">Fiches Unipret
+   
+  </div>
+  <div class="table-responsive">
+    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+          <thead class="text-center">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Dossier</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Code Postal</th>
+              <th scope="col">Date Demande</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody  *ngFor="let i of listResult">
+            <tr>
+              <th class="text-center" scope="row">{{i.id}} </th>
+              <td class="text-center"> {{i.dossier}}</td>
+              <td class="text-center">{{i.nom_e}}</td>
+              <td class="text-center">{{i.codepostal}}</td>
+              <td class="text-center">{{i.datedemande}}</td>
+
+              <td class="text-center">                
+                   <button  *ngIf="i.qualification ==null" type="button" (click)="addQuali(i.id)" class="mb-2 mr-2 btn-transition btn btn-outline-warning ml-1">Qualification</button>
+                   <button  *ngIf="i.qualification !=null" type="button" (click)="sim(i)" class="mb-2 mr-2 btn-transition btn btn-outline-focus ml-1">Simulation</button>
+
+        
+                   <button  type="button" (click)="edit(i.id)" class="font-icon-wrapper border-0 btn btn-outline-light ml-1" style="width: 40px;height: 40px;"><i class="fa fa-fw " aria-hidden="true"></i> </button>
+
+                  </td>
+            
+            </tr>
+           
+          </tbody>
+        </table>
+ </div>
+ 

@@ -1,0 +1,132 @@
+<div class="animated fadeIn">
+
+  <div class="wrapper fadeInDown">
+      <div id="formContent">
+
+          <form #addressForm="ngForm" class="container mt-3">
+              <h4>Crédits</h4>
+
+              <div class="row justify-content-center">
+
+                  <div class="col-12">
+
+                      <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
+                          <div class="row">
+                              <div class="col-6">
+                                  <h4>Crédit {{i + 1}}</h4>
+                              </div>
+                              <div class="col-6 text-right">
+                                  <button type="button" class="btn btn-outline-light mb-2"
+                                      (click)="removeAddress(i)"><img src="../../../../../assets/images/avatars/delete.png"
+                                          style="width:15px" /></button>
+                              </div>
+                          </div>
+                          <div class="row">
+
+                              <div class="col-4">
+                                  <div class="form-group">
+                                      <label>Type crédit</label>
+                                      <select class="form-control" [(ngModel)]="address.type" name="type_{{i}}">
+                                          <option value="Immobilier">Immobilier</option>
+                                          <option value="Renouvelable">Renouvelable</option>
+                                          <option value="Personnel">Personnel</option>
+                                          <option value="Travaux">Travaux</option>
+                                          <option value="Consommation">Consommation</option>
+
+                                          <option value="Moto">Moto</option>
+                                          <option value="Rachat de credit">Rachat de credit</option>
+                                          <option value="Dette diverse">Dette diverse</option>
+                                          <option value="Découvert bancaire">Découvert bancaire</option>
+                                          <option value="Autres">Autres</option>
+
+                                      </select>
+                                  </div>
+                              </div>
+
+                              <div class="col-4">
+                                  <div class="form-group">
+                                      <label>Organisme</label>
+                                      <input type="text" class="form-control" [(ngModel)]="address.organisme"
+                                          name="organisme{{i}}" />
+                                  </div>
+                              </div>
+
+                         
+                              <div class="col-4">
+                                  <div class="form-group">
+                                      <label>CRD</label>
+                                      <input type="text" class="form-control" [(ngModel)]="address.crd"
+                                          name="crd{{i}}" />
+                                  </div>
+                              </div>
+                            
+                          </div>
+
+                          <div class="row">
+                             
+                              <div class="col-4">
+                                  <div class="form-group">
+                                      <label>Mensualité</label>
+                                      <input type="text" class="form-control" [(ngModel)]="address.mensualite"
+                                          name="mensualite{{i}}" />
+
+                                  </div>
+                              </div>
+
+
+                              <div class="col-4">
+                                  <div class="form-group">
+                                      <label>Mensualité en retard</label>
+                                      <input type="text" class="form-control" [(ngModel)]="address.menRetard"
+                                          name="menRetard{{i}}" />
+                                  </div>
+                              </div>
+
+                              <div class="col-4">
+                                  <div class="form-group">
+                                      <label>à Racheter</label>
+                                      <select class="form-control" [(ngModel)]="address.rachete" name="rachete{{i}}">
+                                            <option value="oui">Oui</option>
+                                          <option value="non">Non</option>
+
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+
+                      </section>
+
+                   
+                  </div>
+              </div>
+              <button type="button" style="border: none;" class="btn btn-outline-light mb-2"
+                  (click)="addAddress()"><img src="../../../../../assets/images/avatars/plus.png" style="width:30px" /></button>
+
+          </form>
+
+          <div class="row mt-3 mb-3">
+              <div class="col-3 mt-2">
+                  <h6>Trésorerie souhaitée : </h6>
+              </div>
+              <div class="col-2">
+                  <input type="text" class="form-control" [(ngModel)]="treSou" />
+              </div>
+              <div class="col-3 mt-2">
+                  <h6>Projet Tréso :</h6>
+
+              </div>
+              <div class="col-2">
+                  <input type="text" class="form-control" [(ngModel)]="proTre" />
+
+              </div>
+          </div>
+
+          <div class="container">
+              <button type="button" (click)="addCredit()" class="btn btn-dark mt-3 mb-3">Enregistrer</button>
+
+          </div>
+
+        
+      </div>
+  </div>
+</div>

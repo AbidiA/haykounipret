@@ -1,0 +1,169 @@
+<div class="animated fadeIn mt-3" >
+
+  <div class="wrapper fadeInDown">
+      <div id="formContent">
+          <h3 style="margin-top: 3%;">Simulateur</h3>
+          <form class="container mb-3" [formGroup]="simForm">
+              <div class="form-row" style="margin-top: 4%;">
+                  <div class="col-2"></div>
+                  <div class="col-3">
+                      <select name="" id="" class="custom-select mr-sm-2" >
+                          <option selected disabled>Type de crédit</option>
+
+                          <option value="">Immobilier</option>
+                          <option value="">Renouvelable</option>
+                          <option value="">Personnel</option>
+                          <option value="">Travaux</option>
+                          <option value="">Consommation</option>
+
+                          <option value="">Moto</option>
+                          <option value="">Rachat de credit</option>
+                          <option value="">Dette diverse</option>
+                          <option value="">Découvert bancaire</option>
+                          <option value="">Autres</option>
+
+
+                      </select>                        
+                  </div>
+                  <div class="col-3">
+                      <input type="text" #box (keyup)="keyup(box.value)" class="form-control" formControlName="reste" placeholder="CRD"  >
+                      
+                  </div>
+
+                 
+                  <div class="col-3">
+
+                      <input type="text" #box4 (keyup)="keyup4(box4.value)" class="form-control" formControlName="ancienMens" placeholder="Ancienne Mensualité"  >
+                     
+                  </div>
+                
+             
+
+              </div>
+              <div class="form-row" style="margin-top: 4%;">
+                  <div class="col-2"></div>
+
+               
+                  <div class="col-3">
+                      <label for="">Tx avec Garantie</label>
+                      <input type="text" #box2 (keyup)="keyup2(box2.value)" class="form-control" formControlName="taux"  [(ngModel)]="troi">
+                    
+                  </div>
+             
+
+
+                  <div class="col-3">
+                      <label for="">Tx sans Garantie</label>
+
+                      <input type="text" #box1 (keyup)="keyup1(box1.value)" class="form-control" formControlName="tauxS"  [(ngModel)]="un">
+                    
+                  </div>
+             
+              </div>
+              
+          </form>
+
+      </div>
+  </div>
+
+</div>
+
+<div class="animated fadeIn" >
+
+  <div class="wrapper fadeInDown" >
+      <div id="formContent" >
+
+          <div class="form-row ml-3" style="margin-top: 4%;">
+                  
+              <div>
+                  <h6 >Besoin Client : {{box.value}}</h6>
+              </div>
+
+          </div>
+                          <!--
+
+          <div class="form-row" style="margin-top: 4%;">
+              
+              <div>
+                  <h6><strong>IRA :</strong>  {{clau}}</h6>
+              </div>
+
+          </div>
+         -->
+
+          <div class="form-row ml-3" style="margin-top: 4%;">
+              
+              <div>
+                  <h6>Taux sans garantie: {{troi}}</h6>
+              </div>
+
+          </div>
+
+          <div class="form-row ml-3" style="margin-top: 4%;">
+              
+              <div>
+                  <h6>Taux avec garantie: {{un}}</h6>
+              </div>
+
+          </div>
+     
+         
+
+          <h3  style="margin-top: 3%;"> Mensualité pour chaque année sans garantie </h3>
+
+          <div class="form-row ml-3 mb-3" style="margin-top: 4%;text-align: center;">
+                  
+              <div class="container mb-1" >
+          
+                  <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Nbr année</th>
+                          <th scope="col">Nouvelle Mensualité</th>
+                          <th scope="col">Gain</th>
+                        </tr>
+                      </thead>
+                      <tbody  *ngFor="let i of tableAnnee">
+                        <tr>
+                          <th scope="row">{{i.ans}} </th>
+                          <td> {{ keyup3(i.ans) }}</td>
+                          <td class="{{color}}">{{gainN}}</td>
+                   
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                    
+              </div>
+
+          </div>
+
+          <h3 style="margin-top: 3%;" > Mensualité pour chaque année avec garantie</h3>
+
+          <div class="form-row ml-3 mb-3" style="margin-top: 4%;text-align: center;">
+                  
+              <div class="container mb-1" >
+                  <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Nbr d'année</th>
+                          <th scope="col">Nouvelle Mensualité</th>
+                          <th scope="col">Gain</th>
+                        </tr>
+                      </thead>
+                      <tbody  *ngFor="let i of tableAnneeT">
+                        <tr>
+                          <th scope="row">{{i.ans}} </th>
+                          <td> {{ keyup6(i.ans) }}</td>
+                          <td class="{{color}}">{{gainN}}</td>
+                   
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>
