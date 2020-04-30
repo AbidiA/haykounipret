@@ -57,7 +57,7 @@
     "html2pdf.js": "^0.9.2",
     "ionicons": "^4.5.5",
     "ionicons-npm": "^2.0.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jspdf": "^1.4.1",
     "jw-bootstrap-switch-ng2": "^2.0.5",
     "linearicons": "^1.0.1",
